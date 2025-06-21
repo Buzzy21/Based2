@@ -23,9 +23,34 @@ inputField.addEventListener("input",()=> {
     i++;
     
     termB = grabTerm();
-
-    if(operator=='+') {
-        console.log("Results:",parseInt(termA)+parseInt(termB));
-    }
+    if(termB=='') return;
+    
+    termA = parseInt(termA);
+    termB = parseInt(termB);
+    
+    switch(operator) {
+        case '+':
+            console.log("Results:",termA+termB);
+            break;
+        case '-':
+            console.log("Results:",termA-termB);
+            break;
+        case '*':
+            console.log("Results:",termA*termB);
+            break;
+        case '/': 
+            console.log("Results:",termA/termB);
+            break;
+        case '^':
+            console.log("Results",termA^termB);
+            break;
+        case '&':
+            console.log("Results",termA&termB);
+            break;
+        case '|':
+            console.log("Results",termA|termB);
+            break;
+        
+    } 
     // console.log("Term A:",termA," | Operator:",operator," | Term B",termB);
 });
