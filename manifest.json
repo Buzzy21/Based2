@@ -1,6 +1,6 @@
 {
   "name": "Based2",
-  "description": "Pocket calculator for base 2/binary calculations on the go",
+  "description": "Pocket calculator for regular and bit calculations on the go",
   "version": "1.0",
   "manifest_version": 3,
   "action": {

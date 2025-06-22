@@ -3,7 +3,7 @@
 <html> 
     <body>
         <p>
-            Enter the calculation in the form of Term1 OPERATOR Term2 (such as 2+2, 3^5, etc.). Note that whitespaces are ignored.<br>
+            Enter the prompts in the form of A#B#C... (such as 2+2, 3^5^1*5, etc.). Note that whitespaces are ignored.<br><br>
             Currently, the only supported operations are:<br>
             + : Addition<br>
             - : Subtraction<br>
@@ -12,8 +12,10 @@
             ^ : XOR/Exclusive or<br>
             & : AND<br>
             | : Or<br>
+
+            The order of operation does not apply.
         </p>
-        <input type="text" id="input" placeholder="Insert Calculation Here">
+        <textarea type="text" id="input" placeholder="Insert Calculation Here"></textarea>
 
         <textarea id="display" readonly placeholder="Results here"></textarea>
         <script src="script.js"></script>
