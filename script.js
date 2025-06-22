@@ -1,4 +1,5 @@
 const inputField = document.getElementById("input");
+const displayField = document.getElementById("display");
 
 // Note that currently the text box only works for one calculation at once
 inputField.addEventListener("input",()=> {
@@ -17,40 +18,43 @@ inputField.addEventListener("input",()=> {
 
     termA = grabTerm();
 
-    if(i >= inputString.len) return;
+    if(i >= inputString.len) {return;}
     let operator = inputString[i];
 
     i++;
     
     termB = grabTerm();
-    if(termB=='') return;
+    if(termB=='') {return;}
     
     termA = parseInt(termA);
     termB = parseInt(termB);
+
+    let output;
     
     switch(operator) {
         case '+':
-            console.log("Results:",termA+termB);
+            output = termA + termB;
             break;
         case '-':
-            console.log("Results:",termA-termB);
+            output = termA - termB;
             break;
         case '*':
-            console.log("Results:",termA*termB);
+            output = termA * termB;
             break;
         case '/': 
-            console.log("Results:",termA/termB);
+            output = termA / termB;
             break;
         case '^':
-            console.log("Results",termA^termB);
+            output = termA ^ termB;
             break;
         case '&':
-            console.log("Results",termA&termB);
+            output = termA & termB;
             break;
         case '|':
-            console.log("Results",termA|termB);
+            output = termA | termB;
             break;
         
     } 
-    // console.log("Term A:",termA," | Operator:",operator," | Term B",termB);
+    console.log("Result:",output);
+    displayField.value = output;
 });
