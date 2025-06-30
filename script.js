@@ -43,7 +43,7 @@ var calculateString = (inputString) => {
         let term = "";
         for(; i < inputString.length && (!isNaN(inputString[i]) || inputString[i] == ' '); i++) {
             if(!isNaN(inputString[i])) term += inputString[i];
-        }
+        } 
         return term;
     }
 
@@ -64,6 +64,8 @@ var calculateString = (inputString) => {
 // Note that currently the text box only works for one calculation at once
 inputField.addEventListener("input",()=> {
     const inputString = inputField.value;
+    const sequences = inputString.split('\n'); // Each line is an indepe
+
     let output = calculateString(inputString);
 
     if(output != "INVALID") displayField.value = output;
