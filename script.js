@@ -63,10 +63,22 @@ var calculateString = (inputString) => {
 
 // Note that currently the text box only works for one calculation at once
 inputField.addEventListener("input",()=> {
+    // Resize the textareas
+    inputField.style.height = "auto";
+    inputField.style.height = inputField.scrollHeight + "px";
+    displayField.style.height = "auto";
+    displayField.style.height = inputField.scrollHeight + "px";
+
     const inputString = inputField.value;
-    const sequences = inputString.split('\n'); // Each line is an indepe
+    const sequences = inputString.split('\n'); // Each line is an independent sequence
 
-    let output = calculateString(inputString);
+    let output = "";
+    for(let seq = 0; seq < sequences.length; seq++) {
+        result = calculateString(sequences[seq]);
+        if(result != "INVALID") {
+            output += result + "\n";
+        }   
+    }
 
-    if(output != "INVALID") displayField.value = output;
+    displayField.value = output;
 });
