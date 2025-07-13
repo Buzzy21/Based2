@@ -30,6 +30,8 @@ var operate = (termA, termB, operator) => {
         case '|':
             output = termA | termB;
             break;    
+        case '>':
+            output = termA ** termB;
     } 
 
     console.log("Result:",output);
