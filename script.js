@@ -9,29 +9,45 @@ var operate = (termA, termB, operator) => {
     let output = "INVALID";
     
     switch(operator) {
-        case '+':
+        case '+'://add
             output = termA + termB;
             break;
-        case '-':
+        case '-'://sub
             output = termA - termB;
             break;
-        case '*':
+        case '*'://mult
             output = termA * termB;
             break;
-        case '/': 
+        case '/': //div
             output = termA / termB;
             break;
-        case '^':
+        case '^'://xor
             output = termA ^ termB;
             break;
-        case '&':
+        case '&'://and
             output = termA & termB;
             break;
-        case '|':
+        case '|'://or
             output = termA | termB;
             break;    
-        case '>':
+        case '>'://exp
             output = termA ** termB;
+            break;
+        case '%'://mod
+            output = termA % termB;
+            break;
+        case '_'://floor
+            let x = termA/termB;
+            let i = x | 0;
+            if(x<= 0&& x!==i){
+                output = i-1;
+            }
+            else{
+                output = i;
+            }
+            break;
+        case '~'://avg
+            output = (termA+termB)/2;
     } 
 
     console.log("Result:",output);
