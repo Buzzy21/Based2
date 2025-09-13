@@ -9,34 +9,34 @@ var operate = (termA, termB, operator) => {
     let output = "INVALID";
     
     switch(operator) {
-        case '+'://add
+        case '+':// Addition
             output = termA + termB;
             break;
-        case '-'://sub
+        case '-':// Subtraction
             output = termA - termB;
             break;
-        case '*'://mult
+        case '*':// Multiplication
             output = termA * termB;
             break;
-        case '/': //div
+        case '/': // Division
             output = termA / termB;
             break;
-        case '^'://xor
+        case '^':// XOR
             output = termA ^ termB;
             break;
-        case '&'://and
+        case '&':// AND
             output = termA & termB;
             break;
-        case '|'://or
+        case '|':// OR
             output = termA | termB;
             break;    
-        case '>'://exp
+        case '>':// Exponents/To the power of
             output = termA ** termB;
             break;
-        case '%'://mod
+        case '%':// Modulus
             output = termA % termB;
             break;
-        case '_'://floor
+        case '_':// Floor
             let x = termA/termB;
             let i = x | 0;
             if(x<= 0&& x!==i){
@@ -46,7 +46,7 @@ var operate = (termA, termB, operator) => {
                 output = i;
             }
             break;
-        case '~'://avg
+        case '~':// Average
             output = (termA+termB)/2;
     } 
 
